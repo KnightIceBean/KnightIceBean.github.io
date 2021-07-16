@@ -1,5 +1,5 @@
 birds = [];
-let numBirds = 5;
+let numBirds = 10;
 
 class Bird {
    
@@ -259,7 +259,9 @@ function init() {
 
 	birds.push(new Bird(1520*scale_width,340*scale_height,25,1/20,random()));
 	birds.push(new Bird(1550*scale_width,360*scale_height,25,1/20,random()));
-	birds.push(new Bird(1580*scale_width,380*scale_height,25,1/20,random()));		
+	birds.push(new Bird(1580*scale_width,380*scale_height,25,1/20,random()));
+
+	for (let i = 0; i < numBirds; i++) birds.push(new Bird(random(0,width),random(0,height),random(20,50),1/20,random()));		
 
 	birds = birds.sort((a, b) => a.size - b.size);
 }
